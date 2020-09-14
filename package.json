@@ -4,12 +4,12 @@
   "private": true,
   "scripts": {
     "build": "node ace build",
-    "start": "ENV_SILENT=true node server.js",
+    "start": "ENV_SILENT=true node build/server.js",
     "release": "ENV_SILENT=true node ace migration:run --force && node ace build",
     "lint": "eslint . --ext=.ts"
   },
   "devDependencies": {
-    "@adonisjs/assembler": "^2.0.0",
+    "@adonisjs/assembler": "^2.1.5",
     "adonis-preset-ts": "^1.0.4",
     "eslint": "^7.8.1",
     "eslint-plugin-adonis": "^1.0.15",
