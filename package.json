@@ -5,7 +5,7 @@
   "scripts": {
     "build": "node ace build",
     "start": "ENV_SILENT=true node build/server.js",
-    "release": "ENV_SILENT=true node ace migration:run --force",
+    "release": "ENV_SILENT=true node ace migration:run --force && npm run start",
     "lint": "eslint . --ext=.ts"
   },
   "devDependencies": {
