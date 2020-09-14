@@ -1,9 +1,9 @@
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
-import Product from 'App/Models/Product';
+import Product from 'App/Models/Product'
 
 export default class ProductsController {
-  public async index({ request }: HttpContextContract) {
-    const { page, search, limit = 16 } = request.get()
+  public async index ({ request }: HttpContextContract) {
+    const { page, search, limit = 10 } = request.get()
 
     const query = Product
       .query()
@@ -21,10 +21,10 @@ export default class ProductsController {
 
     const products = await query.paginate(page, limit)
 
-    return products;
+    return products
   }
 
-  public async store({ request }: HttpContextContract) {
+  public async store ({ request }: HttpContextContract) {
     const data = request.only(['title', 'description', 'price', 'discount'])
     const images = request.input('images')
 
@@ -37,7 +37,7 @@ export default class ProductsController {
     return product
   }
 
-  public async destroy({ params }: HttpContextContract) {
+  public async destroy ({ params }: HttpContextContract) {
     const { id } = params
 
     const product = await Product.findOrFail(id)

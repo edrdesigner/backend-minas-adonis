@@ -1,22 +1,22 @@
 import { DateTime } from 'luxon'
 import { BaseModel, column, hasMany, HasMany } from '@ioc:Adonis/Lucid/Orm'
-import Image from './Image';
+import Image from './Image'
 
 export default class Product extends BaseModel {
   @column({ isPrimary: true })
   public id: number
 
   @column()
-  public title: string;
+  public title: string
 
   @column()
-  public description: string;
+  public description: string
 
   @column()
-  public price: number;
+  public price: number
 
   @column()
-  public discount: number;
+  public discount: number
 
   @hasMany(() => Image)
   public images: HasMany<typeof Image>
