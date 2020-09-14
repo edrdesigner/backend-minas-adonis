@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "node ace build",
+    "build": "node ace build --production && cd build && yarn install --production",
     "start": "ENV_SILENT=true node build/server.js",
-    "release": "ENV_SILENT=true node ace migration:run --force && npm run start",
+    "release": "ENV_SILENT=true node ace migration:run --force",
     "lint": "eslint . --ext=.ts"
   },
   "devDependencies": {
