@@ -4,7 +4,6 @@
 - [**Git**](https://git-scm.com/)
 - [**Node.js Version >= 10**](https://nodejs.org/en/)
 - [**Yarn**](https://yarnpkg.com/)
-- [**Docker**](https://www.docker.com/)
 - [**Adonis V5**](https://preview.adonisjs.com/guides/quick-start/)
 - [**Insomnia**](https://insomnia.rest/download/)
 
